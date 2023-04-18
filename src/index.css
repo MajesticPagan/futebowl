@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#tabs a.active:not([href="/"]) {
+	@apply text-blue-500;
+    @apply border-blue-500;
+}
