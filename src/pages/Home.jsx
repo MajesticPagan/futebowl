@@ -1,4 +1,4 @@
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -9,7 +9,9 @@ const Home = () => {
 					Futebowl
 				</h1>
 				<p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-gray-400">
-					Acompanhe e verifique <strong className="text-white">todos</strong> os detalhes de <strong className="text-white">todas</strong> as ligas de futebol em todo o mundo. Este website é apenas um projecto pessoal.
+					Acompanhe e verifique <strong className="text-white">todos</strong> os detalhes
+					de <strong className="text-white">todas</strong> as ligas de futebol em todo o
+					mundo. Este website é apenas um projecto pessoal.
 				</p>
 				<div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
 					<Link
@@ -19,9 +21,14 @@ const Home = () => {
 						Competições
 						<FaLongArrowAltRight className="w-4 h-4 ml-2 fill-current" />
 					</Link>
-					<Link to="/about/" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded border focus:ring-2 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800">
-						Sobre
-					</Link>
+					<a
+						href="https://github.com/MajesticPagan"
+						target="_blank"
+						className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded border focus:ring-2 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
+					>
+						My GitHub
+						<FaGithub className="w-4 h-4 ml-2 fill-current" />
+					</a>
 				</div>
 			</div>
 		</section>
