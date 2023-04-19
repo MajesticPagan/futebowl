@@ -12,7 +12,7 @@ const footballApi = createApi({
 	baseQuery: fetchBaseQuery({
 		baseUrl: "https://football98.p.rapidapi.com",
 		prepareHeaders: (headers) => {
-			headers.set("X-RapidAPI-Key", "80273d1134msh0f7275e578ee6afp16f8b5jsna30d22a593c4");
+			headers.set("X-RapidAPI-Key", process.env.API_KEY);
 			headers.set("X-RapidAPI-Host", "football98.p.rapidapi.com");
 			return headers;
 		},
