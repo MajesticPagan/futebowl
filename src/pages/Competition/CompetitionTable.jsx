@@ -12,15 +12,15 @@ const CompetitionTable = () => {
 		return (
 			<Skeleton
 				times={10}
-				className="p-4 md:p-5 md:pt-0 border border-gray-700 rounded shadow space-y-5 divide-y divide-gray-700"
+				className="p-4 md:p-5 md:pt-0 border border-gray-200 dark:border-gray-700 rounded shadow space-y-5 divide-y divide-gray-200 dark:divide-gray-700"
 			>
 				<div className="flex items-center justify-between pt-5 gap-4">
-					<FaCircle className="w-4 h-4 text-gray-500" />
-					<div className="h-2.5 bg-gray-700 rounded-full w-24 mr-auto"></div>
-					<div className="h-2.5 bg-gray-500 rounded-full w-10"></div>
-					<div className="h-2.5 bg-gray-600 rounded-full w-10"></div>
-					<div className="h-2.5 bg-gray-700 rounded-full w-10"></div>
-					<div className="h-2.5 bg-gray-700 rounded-full w-10"></div>
+					<FaCircle className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+					<div className="h-2.5 bg-gray-200 dark:bg-gray-700 rounded-full w-24 mr-auto"></div>
+					<div className="h-2.5 bg-gray-50 dark:bg-gray-500 rounded-full w-10"></div>
+					<div className="h-2.5 bg-gray-100 dark:bg-gray-600 rounded-full w-10"></div>
+					<div className="h-2.5 bg-gray-200 dark:bg-gray-700 rounded-full w-10"></div>
+					<div className="h-2.5 bg-gray-200 dark:bg-gray-700 rounded-full w-10"></div>
 				</div>
 			</Skeleton>
 		);
@@ -39,7 +39,7 @@ const CompetitionTable = () => {
 			{
 				label: "Clube",
 				render: (item) => (
-					<div className="flex items-center gap-4 whitespace-nowrap text-white">
+					<div className="flex items-center gap-4 whitespace-nowrap text-gray-900 dark:text-white">
 						<img
 							className="w-6 h-6"
 							src={item.SquadLogo}

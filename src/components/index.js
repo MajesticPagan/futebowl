@@ -6,6 +6,7 @@ import Spinner from "./Spinner";
 import Card from "./Card";
 import Table from "./Table";
 import SortableTable from "./SortableTable";
+import Toggle from "./Toggle";
 import Sidebar from "./Sidebar";
 import Search from "./Search";
 import CompetitionCard from "./CompetitionCard";
@@ -20,6 +21,7 @@ export {
 	Card,
 	Table,
 	SortableTable,
+	Toggle,
 	Search,
 	Sidebar,
 	CompetitionCard,

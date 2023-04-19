@@ -6,7 +6,7 @@ import Alert from "./Alert";
 
 const Table = ({ config, data, keyFn, className }) => {
 	const tableClassName = classNames(
-		"relative overflow-x-auto border border-gray-800 rounded animate-slowfade",
+		"relative overflow-x-auto rounded border border-gray-300 dark:border-gray-800 animate-slowfade",
 		className
 	);
 
@@ -25,8 +25,8 @@ const Table = ({ config, data, keyFn, className }) => {
 	});
 
 	const renderedRows = data.map((row, i) => {
-		const className = classNames("px-6 py-4 border-b border-gray-800 hover:bg-grey-700", {
-			"bg-gray-800": i & 1,
+		const className = classNames("px-6 py-4 border-b bg-white dark:bg-gray-900 dark:border-gray-700", {
+			"bg-gray-50 dark:bg-gray-800": i & 1,
 		});
 
 		return (
@@ -44,8 +44,8 @@ const Table = ({ config, data, keyFn, className }) => {
 
 	return (
 		<div className={tableClassName}>
-			<table className="w-full text-sm lg:text-base text-center text-gray-400">
-				<thead className="text-xs lg:text-base text-gray-400 bg-gray-700">
+			<table className="w-full text-sm lg:text-base text-center text-gray-500 dark:text-gray-400">
+				<thead className="text-xs lg:text-base text-gray-700 dark:text-gray-400 bg-gray-50 dark:bg-gray-700">
 					<tr>{renderedHeadings}</tr>
 				</thead>
 				<tbody>{renderedRows}</tbody>

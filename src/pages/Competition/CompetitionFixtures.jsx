@@ -20,7 +20,7 @@ const CompetitionFixtures = () => {
 		<>
 			{fixtures?.map((item) => (
 				<Card key={item?.title} className="mb-4 sm:mb-7">
-					<h3 className="text-2xl font-bold mb-4 sm:mb-7">{item.title}</h3>
+					<h3 className="text-2xl font-bold mb-4 sm:mb- text-gray-900 dark:text-white">{item.title}</h3>
 					<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-7">
 						{item?.matches?.map((match, i) => (
 							<ResultCard key={`${item?.title}-${i}`} match={match} />

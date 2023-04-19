@@ -72,7 +72,7 @@ const CompetitionTransfers = () => {
 					const tableConfig = listsConfig[name];
 					return (
 						<div key={name} className="mb-4 sm:mb-7">
-							<h3 className="text-2xl font-bold mb-4 sm:mb-7">{name}</h3>
+							<h3 className="text-2xl font-bold mb-4 sm:mb-7 text-gray-900 dark:text-white">{name}</h3>
 							<SortableTable
 								config={tableConfig}
 								data={items}

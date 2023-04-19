@@ -3,10 +3,10 @@ import classNames from "classnames";
 
 const Card = ({ children, hover, ...rest }) => {
 	const cardClassName = classNames(
-		"p-6 bg-gray-800 border border-gray-700 rounded shadow animate-slowfade",
+		"p-6 rounded border bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 animate-slowfade",
 		rest.className,
 		{
-			"hover:bg-gray-700 hover:border-gray-600": hover,
+			"hover:bg-gray-100 dark:hover:bg-gray-700": hover,
 		}
 	);
 

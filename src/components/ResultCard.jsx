@@ -11,7 +11,7 @@ const ResultCard = ({ match }) => {
 				/>
 				<span>{match?.homeTeam}</span>
 			</div>
-			<div className="min-w-[80px] p-2 bg-gray-700 border border-gray-600 rounded text-center relative">
+			<div className="min-w-[80px] p-2 bg-gray-200 dark:bg-gray-700 border border-gray-100 dark:border-gray-600 rounded text-center relative">
 				{match?.MatchDay ? (
 					<span className="w-full block text-xs mb-2">{match?.MatchDay}</span>
 				) : (

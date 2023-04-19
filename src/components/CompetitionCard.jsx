@@ -5,7 +5,7 @@ const CompetitionCard = ({ competition }) => {
 	let competitionLink = `/competitions/${competition}`;
 
 	return (
-		<div className="p-6 bg-gray-800 border border-gray-700 rounded shadow animate-slideup">
+		<Card hover>
 			<h5 className="mb-2 text-2xl font-bold tracking-tight text-white truncate">
 				<Link to={competitionLink}>{competition}</Link>
 			</h5>
@@ -26,7 +26,7 @@ const CompetitionCard = ({ competition }) => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</Card>
 	);
 };
 

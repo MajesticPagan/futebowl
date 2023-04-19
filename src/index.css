@@ -6,3 +6,7 @@
 	@apply text-blue-500;
     @apply border-blue-500;
 }
+
+#tabs a.active:not([href="/"]) svg {
+	@apply text-blue-500;
+}

@@ -1,25 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// Dev only
-// const pause = (duration) => {
-// 	return new Promise((resolve) => {
-// 		setTimeout(resolve, duration);
-// 	});
-// };
-
 const footballApi = createApi({
 	reducerPath: "football",
 	baseQuery: fetchBaseQuery({
 		baseUrl: "https://football98.p.rapidapi.com",
 		prepareHeaders: (headers) => {
-			headers.set("X-RapidAPI-Key", process.env.API_KEY);
+			headers.set("X-RapidAPI-Key", import.meta.env.VITE_RAPIDAPI_KEY );
 			headers.set("X-RapidAPI-Host", "football98.p.rapidapi.com");
 			return headers;
-		},
-		// fetchFn: async (...args) => {
-		// 	await pause(90000);
-		// 	return fetch(...args);
-		// },
+		}
 	}),
 	endpoints: (builder) => ({
 		getCompetitions: builder.query({

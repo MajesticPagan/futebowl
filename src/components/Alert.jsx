@@ -4,13 +4,13 @@ import classNames from "classnames";
 const Alert = ({ title, info, danger, success, warning, dark, ...rest }) => {
 	const alertClassName = classNames(
 		rest.className,
-		"p-4 mb-4 text-sm lg:text-base rounded bg-gray-800",
+		"p-4 mb-4 text-sm lg:text-base rounded dark:bg-gray-800",
 		{
-			"text-blue-400": info,
-			"text-red-400": danger,
-			"text-green-400": success,
-			"text-yellow-300": warning,
-			"text-gray-300": dark,
+			"text-blue-800 bg-blue-50 dark:text-blue-400": info,
+			"text-red-800 bg-red-50 dark:text-red-400": danger,
+			"text-green-800 bg-green-50 dark:text-green-400": success,
+			"text-yellow-800 bg-yellow-50 dark:text-yellow-300": warning,
+			"text-gray-800 bg-gray-50 dark:text-gray-300": dark,
 		}
 	);
 
