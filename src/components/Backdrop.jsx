@@ -11,7 +11,7 @@ const Backdrop = ({ onClick }) => {
 
 	return createPortal(
 		<div
-			className="bg-gray-300 dark:bg-gray-900 bg-opacity-80 fixed inset-0 z-30"
+			className="bg-gray-300 dark:bg-gray-900 bg-opacity-80 dark:bg-opacity-80 fixed inset-0 z-30"
 			onClick={onClick}
 		></div>,
 		document.getElementById("backdrop-root")

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FaBars } from "react-icons/fa";
+import classNames from "classnames";
 
 import { sidebarLinks } from "../assets/constants";
 import { toggleDarkMode } from "../store/slices/optionsSlice";
@@ -35,6 +36,14 @@ const Sidebar = () => {
 		setIsSidebarOpen(false);
 	};
 
+	const sidebarOpenClassName = classNames(
+		"fixed top-0 left-0 z-40 w-64 h-screen transition-transform lg:translate-x-0",
+		{
+			"-translate-x-0": isSidebarOpen,
+			"-translate-x-full": !isSidebarOpen,
+		}
+	);
+
 	return (
 		<>
 			<button
@@ -47,13 +56,7 @@ const Sidebar = () => {
 				<FaBars className="w-6 h-6" />
 			</button>
 
-			<aside
-				id="sidebar"
-				className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
-					isSidebarOpen ? "-translate-x-0" : "-translate-x-full"
-				} lg:translate-x-0`}
-				aria-label="Sidebar"
-			>
+			<aside id="sidebar" className={sidebarOpenClassName} aria-label="Sidebar">
 				<div className="flex flex-col gap-4 h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
 					<ul className="space-y-2 font-medium">
 						{sidebarLinks.map((item) => (
@@ -70,7 +73,7 @@ const Sidebar = () => {
 					</ul>
 					<div className="flex flex-col items-center gap-3 mt-auto px-3 py-4 rounded border border-gray-200 dark:border-gray-700">
 						<p className="text-center text-sm dark:text-white">Definições</p>
-						<Toggle onToggle={handleToggle} title="Modo escuro" />
+						<Toggle onToggle={handleToggle} title="Modo escuro" checked={darkMode} />
 					</div>
 				</div>
 			</aside>

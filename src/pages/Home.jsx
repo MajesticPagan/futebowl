@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
 	return (
-		<section className="flex flex-col justify-center lg:h-[calc(100vh-3.5rem)]">
-			<div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+		<section className="flex flex-col justify-center h-[calc(100vh-3.5rem)]">
+			<div className="py-8 md:px-4 mx-auto max-w-screen-xl text-center lg:py-16">
 				<h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-gray-900 dark:text-white">
 					Futebowl
 				</h1>
-				<p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-gray-500 dark:text-gray-400">
+				<p className="mb-8 text-lg font-normal lg:text-xl md:px-16 xl:px-48 text-gray-500 dark:text-gray-400">
 					Acompanhe e verifique{" "}
 					<strong className="text-gray-900 dark:text-white">todos</strong> os detalhes de{" "}
 					<strong className="text-gray-900 dark:text-white">todas</strong> as ligas de
